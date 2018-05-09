@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the GanadoresPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { GanadoresProvider } from '../../providers/ganadores/ganadores';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GanadoresPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ganadores: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ganadoresService: GanadoresProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GanadoresPage');
+    this.ganadoresService.getGanadores().then((data) =>{
+      console.log(data);
+      this.ganadores = data;
+    });
   }
 
 }

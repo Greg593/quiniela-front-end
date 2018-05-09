@@ -15,10 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GruposPage {
 
+  grupos
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+   
     console.log('ionViewDidLoad GruposPage');
   }
 

@@ -6,13 +6,29 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ganadores</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar>
+      <ion-title>Ganadores</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-grid>
+      <ion-row>
+        <ion-col><b>Año</b></ion-col>
+        <ion-col><b>Sede</b></ion-col>
+        <ion-col><b>Campeon</b></ion-col>
+        <ion-col><b>Sub Campeon</b></ion-col>
+        <ion-col><b>Tercer Lugar</b></ion-col>
+      </ion-row>
+  
+      <ion-row *ngFor="let ganador of ganadores">
+        <ion-col>{{ganador.anio}}</ion-col>
+        <ion-col>{{ganador.sede}}</ion-col>
+        <ion-col>{{ganador.primer_lugar}}</ion-col>
+        <ion-col>{{ganador.segundo_lugar}}</ion-col>
+        <ion-col>{{ganador.tercer_lugar}}</ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  </ion-content>
