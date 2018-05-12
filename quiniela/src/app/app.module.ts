@@ -45,7 +45,7 @@ import { GanadoresProvider } from '../providers/ganadores/ganadores';
     TabsPage,
     HistoriaPage,
     GanadoresPage,
-    GoleadoresPage
+    GoleadoresPage,
   ],
   providers: [
     StatusBar,
