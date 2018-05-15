@@ -13,31 +13,10 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list no-lines>
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo A
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo B
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo C
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo D
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo E
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo F
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo G
-    </button> 
-    <button ion-item (click)="itemSelected(grupo)">
-      Grupo H
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let grupo of grupos" (click)="openNavDetailsPage(grupo)" icon-start>      
+      {{ grupo.titulo }}
     </button> 
   </ion-list>
 </ion-content>

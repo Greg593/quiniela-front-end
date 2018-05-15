@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { EquiposPage } from '../equipos/equipos';
 
 /**
  * Generated class for the GruposPage page.
@@ -15,8 +16,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GruposPage {
 
-  grupos
+  grupos = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.grupos = [
+      {
+        'titulo':'Grupo A'
+      },
+      {
+        'titulo':'Grupo B'
+      },
+      {
+        'titulo':'Grupo C'
+      },
+      {
+        'titulo':'Grupo D'
+      },
+      {
+        'titulo':'Grupo E'
+      },
+      {
+        'titulo':'Grupo F'
+      },
+      {
+        'titulo':'Grupo G'
+      },
+      {
+        'titulo':'Grupo H'
+      },
+    ]
+  }
+
+  openNavDetailsPage(grupo) {
+    this.navCtrl.push(EquiposPage, { grupo: grupo });
   }
 
   ionViewDidLoad() {

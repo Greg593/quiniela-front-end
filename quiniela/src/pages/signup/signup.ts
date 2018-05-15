@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the EquiposPage page.
+ * Generated class for the SignupPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,18 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-equipos',
-  templateUrl: 'equipos.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
 })
-export class EquiposPage {
-  grupo;
+export class SignupPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.grupo = navParams.data.grupo;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EquiposPage');
+    console.log('ionViewDidLoad SignupPage');
   }
 
 }
