@@ -5,13 +5,15 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
+  <ion-navbar no-border-bottom color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>principal</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-    <button ion-button round (click)="quiniela()">Crear Quiniela</button>    
+  <button ion-button round (click)="quiniela()">Crear Quiniela</button>
 </ion-content>

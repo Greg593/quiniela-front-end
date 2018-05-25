@@ -15,13 +15,18 @@ import { EquiposPage } from '../pages/equipos/equipos';
 import { PrincipalPage } from '../pages/principal/principal';
 import { GruposPage } from '../pages/grupos/grupos';
 import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
+
 import { GruposProvider } from '../providers/grupos/grupos';
 import { GanadoresProvider } from '../providers/ganadores/ganadores';
+import { AuthProvider } from '../providers/auth/auth';
+
 
 @NgModule({
   declarations: [
@@ -36,13 +41,15 @@ import { GanadoresProvider } from '../providers/ganadores/ganadores';
     EquiposPage,
     PrincipalPage,
     GruposPage,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +64,8 @@ import { GanadoresProvider } from '../providers/ganadores/ganadores';
     EquiposPage,
     PrincipalPage,
     GruposPage,
-    LoginPage
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
@@ -65,6 +73,7 @@ import { GanadoresProvider } from '../providers/ganadores/ganadores';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GruposProvider,
     GanadoresProvider,
+    AuthProvider,
   ]
 })
 export class AppModule {}

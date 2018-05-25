@@ -1,1 +1,22 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <img src="/assets/imgs/copa_rusia.PNG" alt="">
+        <ion-list>
+            <button ion-item *ngFor="let page of pages" (click)="goToPage(page.component)" color="danger" menuClose>
+                <ion-icon item-left name="{{ page.icon }}"></ion-icon>
+                {{ page.titulo}}
+            </button>
+            <button ion-item (click)="logout()" color="danger" menuClose>
+                <ion-icon item-left name="log-out"></ion-icon>
+                Cerrar Sesión
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
