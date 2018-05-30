@@ -12,6 +12,7 @@ import { GruposPage } from '../pages/grupos/grupos';
 import { GanadoresPage } from '../pages/ganadores/ganadores';
 
 import { AuthProvider } from '../providers/auth/auth';
+import { TablaPage } from '../pages/tabla/tabla';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +30,8 @@ export class MyApp {
       { titulo: 'Inicio', component: HomePage, icon: 'home-outline' },
       { titulo: 'Quiniela', component: GruposPage, icon: 'bookmarks-outline' },
       { titulo: 'Historia', component: GanadoresPage, icon: 'document-outline' },
-      { titulo: 'Acerca de', component: AboutPage, icon: 'information-circle-outline' }
+      { titulo: 'Acerca de', component: AboutPage, icon: 'information-circle-outline' },
+      { titulo: 'Tabla de Posiciones', component: TablaPage, icon: 'information-circle-outline' }
       // {titulo: 'Cerrar Sesión', component: '',            icon: 'log-out'}
     ];
 

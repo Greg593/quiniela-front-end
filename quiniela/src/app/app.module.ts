@@ -16,6 +16,7 @@ import { PrincipalPage } from '../pages/principal/principal';
 import { GruposPage } from '../pages/grupos/grupos';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { TablaPage } from '../pages/tabla/tabla';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,6 +27,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { GruposProvider } from '../providers/grupos/grupos';
 import { GanadoresProvider } from '../providers/ganadores/ganadores';
 import { AuthProvider } from '../providers/auth/auth';
+import { TablaProvider } from '../providers/tabla/tabla';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { AuthProvider } from '../providers/auth/auth';
     PrincipalPage,
     GruposPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    TablaPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { AuthProvider } from '../providers/auth/auth';
     PrincipalPage,
     GruposPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    TablaPage
   ],
   providers: [
     StatusBar,
@@ -74,6 +78,7 @@ import { AuthProvider } from '../providers/auth/auth';
     GruposProvider,
     GanadoresProvider,
     AuthProvider,
+    TablaProvider,
   ]
 })
 export class AppModule {}

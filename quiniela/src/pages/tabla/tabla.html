@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  <ion-title>Tablas </ion-title>
+</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let tabla of tablas?.standings?.A">      
+      <ion-card>
+        <!-- <img src="assets/imgs/copa.png" />         -->
+        <!-- <div class="card-title">{{tabla.A[i].group}}</div> -->
+        <ion-card-content class="fixline">
+            <ion-row>
+                <ion-col><b>Equipo:</b></ion-col>
+                <ion-col>{{ tabla.team}}</ion-col>
+              </ion-row>          
+            <!-- <ion-row>
+              <ion-col><b>Equipo:</b></ion-col>
+            <ion-col>{{tablas.standings.A[i].team}}</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col><b>Partidos Jugados:</b></ion-col>
+              <ion-col>{{tablas.standings.A[i].playedGames}}</ion-col>
+          </ion-row>          
+          <ion-row>
+              <ion-col><b>Puntos :</b></ion-col>
+              <ion-col>{{tablas.standings.A[i].points}}</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col><b>Goles:</b></ion-col>
+              <ion-col>{{tablas.standings.A[i].goals}}</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col><b>En Contra:</b></ion-col>
+              <ion-col>{{tablas.standings.A[i].goalsAgainst}}</ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col><b>Diferencia:</b></ion-col>
+              <ion-col>{{tablas.standings.A[i].goalDifference}}</ion-col>
+          </ion-row>           -->
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
